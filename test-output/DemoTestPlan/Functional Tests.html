@@ -1,0 +1,460 @@
+<html>
+<head>
+<title>TestNG:  Functional Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Functional Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>10/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Aug 08 23:26:08 FET 2014</td>
+</tr>
+<tr><td>Total time:</td><td>331 seconds (331654 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='demo.test.Login.xTest()'><b>xTest</b><br>Test class: demo.test.Login<br/>
+<a href="#Output-1272123492" onClick='toggleBox("Output-1272123492", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1272123492" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1272123492">
+-------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Login' =====================<br><br/>
+-------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 2840msec<br><br/>
+Label 'Вход' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Text Field 'Поле логина' :: Typing 'null'<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+Text Field 'Поле пароля' :: Typing 'null'<br><br/>
+--------==[ Step 5 ]==--------<br><br/>
+Button 'Кнопка Войти' :: Clicking<br><br/>
+--------==[ Step 6 ]==--------<br><br/>
+<div class="skipped"></div><br><br/>
+<div class="failedConfig">>>>>>>>> TEST FAILED <<<<<<<<</div><br><br/>
+<div class="skipped"></div><br><br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException
+	at webdriver.elements.BaseElement.waitForIsElementPresent(BaseElement.java:181)
+	at webdriver.elements.BaseElement.getText(BaseElement.java:253)
+	at demo.test.forms.HomePage.signAssert(HomePage.java:93)
+	at demo.test.Login.runTest(Login.java:38)
+	at webdriver.BaseTest.xTest(BaseTest.java:26)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1272123492", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1272123492'><pre>java.lang.NullPointerException
+	at webdriver.elements.BaseElement.waitForIsElementPresent(BaseElement.java:181)
+	at webdriver.elements.BaseElement.getText(BaseElement.java:253)
+	at demo.test.forms.HomePage.signAssert(HomePage.java:93)
+	at demo.test.Login.runTest(Login.java:38)
+	at webdriver.BaseTest.xTest(BaseTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>36</td>
+<td>demo.test.Login@618425b5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='demo.test.Login.readParams()'><b>readParams</b><br>Test class: demo.test.Login<br>Parameters: kolya.vykoryn, kolya123, Коля Викорин<br/>
+<a href="#Output-1099717276" onClick='toggleBox("Output-1099717276", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1099717276" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1099717276">
+-------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Login' =====================<br><br/>
+-------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 77msec<br><br/>
+Label 'Вход' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Text Field 'Поле логина' :: Typing 'kolya.vykoryn'<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+Text Field 'Поле пароля' :: Typing 'kolya123'<br><br/>
+--------==[ Step 5 ]==--------<br><br/>
+Button 'Кнопка Войти' :: Clicking<br><br/>
+--------==[ Step 6 ]==--------<br><br/>
+--------==[ Step 7 ]==--------<br><br/>
+<br><br/>
+************************************************<br><br/>
+***** Test case: 'demo.test.Login' Passed! *****<br><br/>
+************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>demo.test.Login@618425b5</td></tr>
+<tr>
+<td title='demo.test.Finance.xTest()'><b>xTest</b><br>Test class: demo.test.Finance<br/>
+<a href="#Output-14183023" onClick='toggleBox("Output-14183023", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-14183023" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-14183023">
+---------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Finance' =====================<br><br/>
+---------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 14559msec<br><br/>
+Label 'Финансы' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Form 'Финансы' appears in 12059msec<br><br/>
+Label 'Курс НБРБ' :: Clicking<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+<br><br/>
+**************************************************<br><br/>
+***** Test case: 'demo.test.Finance' Passed! *****<br><br/>
+**************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>demo.test.Finance@4f2b503c</td></tr>
+<tr>
+<td title='demo.test.TVset.xTest()'><b>xTest</b><br>Test class: demo.test.TVset<br/>
+<a href="#Output-1944798106" onClick='toggleBox("Output-1944798106", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1944798106" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1944798106">
+-------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.TVset' =====================<br><br/>
+-------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 2393msec<br><br/>
+Label 'ТВ-программа' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Form 'Программа ТВ' appears in 3055msec<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+Пятница, 8 августа<br><br/>
+пятница, 8 августа<br><br/>
+<br><br/>
+************************************************<br><br/>
+***** Test case: 'demo.test.TVset' Passed! *****<br><br/>
+************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>10</td>
+<td>demo.test.TVset@209da20d</td></tr>
+<tr>
+<td title='demo.test.Jobs.xTest()'><b>xTest</b><br>Test class: demo.test.Jobs<br/>
+<a href="#Output-1204481453" onClick='toggleBox("Output-1204481453", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1204481453" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1204481453">
+------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Jobs' =====================<br><br/>
+------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 2444msec<br><br/>
+Text Field 'Строка поиска' :: Typing 'Автоматизатор тестирования ПО'<br><br/>
+Button 'Кнопка Найти' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Form 'Страница поиска' appears in 70msec<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+<br><br/>
+***********************************************<br><br/>
+***** Test case: 'demo.test.Jobs' Passed! *****<br><br/>
+***********************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>11</td>
+<td>demo.test.Jobs@6392827e</td></tr>
+<tr>
+<td title='demo.test.Shop.xTest()'><b>xTest</b><br>Test class: demo.test.Shop<br/>
+<a href="#Output-504807594" onClick='toggleBox("Output-504807594", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-504807594" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-504807594">
+------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Shop' =====================<br><br/>
+------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 1837msec<br><br/>
+Label 'Магазины' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Form 'Страница поиска' appears in 6014msec<br><br/>
+Text Field 'Строка поиска' :: Typing 'apple'<br><br/>
+Button 'Кнопка Найти' :: Clicking<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+--------==[ Step 5 ]==--------<br><br/>
+<br><br/>
+***********************************************<br><br/>
+***** Test case: 'demo.test.Shop' Passed! *****<br><br/>
+***********************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>demo.test.Shop@2ed2d9cb</td></tr>
+<tr>
+<td title='demo.test.Forum.xTest()'><b>xTest</b><br>Test class: demo.test.Forum<br/>
+<a href="#Output-1309335839" onClick='toggleBox("Output-1309335839", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1309335839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1309335839">
+-------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Forum' =====================<br><br/>
+-------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 3391msec<br><br/>
+Label 'Все ресурсы' :: Clicking<br><br/>
+Label 'Форумы' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Form 'Форумы' appears in 121msec<br><br/>
+Text Field 'Строка поиска' :: Typing 'телевизор'<br><br/>
+Button 'Кнопка Найти' :: Clicking<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+<br><br/>
+************************************************<br><br/>
+***** Test case: 'demo.test.Forum' Passed! *****<br><br/>
+************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>demo.test.Forum@1b2abca6</td></tr>
+<tr>
+<td title='demo.test.Building.xTest()'><b>xTest</b><br>Test class: demo.test.Building<br/>
+<a href="#Output-605420629" onClick='toggleBox("Output-605420629", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-605420629" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-605420629">
+----------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Building' =====================<br><br/>
+----------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 2576msec<br><br/>
+Label 'Все ресурсы' :: Clicking<br><br/>
+Label 'Строительство' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Form 'Строительство' appears in 2429msec<br><br/>
+Label 'Окна' :: Clicking<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+<br><br/>
+***************************************************<br><br/>
+***** Test case: 'demo.test.Building' Passed! *****<br><br/>
+***************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>21</td>
+<td>demo.test.Building@e15b7e8</td></tr>
+<tr>
+<td title='demo.test.PrivateOffice.xTest()'><b>xTest</b><br>Test class: demo.test.PrivateOffice<br/>
+<a href="#Output-149225732" onClick='toggleBox("Output-149225732", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-149225732" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-149225732">
+---------------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.PrivateOffice' =====================<br><br/>
+---------------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 2346msec<br><br/>
+Label 'Вход' :: Clicking<br><br/>
+Text Field 'Поле логина' :: Typing 'andrei.internet'<br><br/>
+Text Field 'Поле пароля' :: Typing '9664069'<br><br/>
+Button 'Кнопка Войти' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Label 'Имя пользователя' :: Clicking<br><br/>
+Label 'Личный кабинет' :: Clicking<br><br/>
+Form 'Редактирование профиля' appears in 73msec<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+--------==[ Step 5 ]==--------<br><br/>
+<br><br/>
+********************************************************<br><br/>
+***** Test case: 'demo.test.PrivateOffice' Passed! *****<br><br/>
+********************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>14</td>
+<td>demo.test.PrivateOffice@d5b810e</td></tr>
+<tr>
+<td title='demo.test.Comment.xTest()'><b>xTest</b><br>Test class: demo.test.Comment<br/>
+<a href="#Output-1741786839" onClick='toggleBox("Output-1741786839", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1741786839" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1741786839">
+---------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Comment' =====================<br><br/>
+---------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 1758msec<br><br/>
+Label 'Вход' :: Clicking<br><br/>
+Text Field 'Поле логина' :: Typing 'kolya.vykoryn'<br><br/>
+Text Field 'Поле пароля' :: Typing 'kolya123'<br><br/>
+Button 'Кнопка Войти' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Label 'Первая новость' :: Clicking<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+Form 'Первая новость' appears in 8811msec<br><br/>
+Text Field 'Поле для комментария' :: Typing 'Правительству также рекомендовано при необходимости вносить предложения об изменении срока действия запрета, предусмотренного указом.'<br><br/>
+Button 'Добавить комментарий' :: Clicking<br><br/>
+--------==[ Step 5 ]==--------<br><br/>
+//a[.='kolya.vykoryn']/../../div[@class='comment_txt']<br><br/>
+Правительству также рекомендовано при необходимости вносить предложения об изменении срока действия запрета, предусмотренного указом.<br><br/>
+--------==[ Step 6 ]==--------<br><br/>
+<br><br/>
+**************************************************<br><br/>
+***** Test case: 'demo.test.Comment' Passed! *****<br><br/>
+**************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>25</td>
+<td>demo.test.Comment@6fd83fc1</td></tr>
+<tr>
+<td title='demo.test.Logout.xTest()'><b>xTest</b><br>Test class: demo.test.Logout<br/>
+<a href="#Output-1355887174" onClick='toggleBox("Output-1355887174", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1355887174" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1355887174">
+--------------------------------------------------------------------------<br><br/>
+=====================  Test case: 'demo.test.Logout' =====================<br><br/>
+--------------------------------------------------------------------------<br><br/>
+--------==[ Preconditions ]==--------<br><br/>
+--------==[ Step 1 ]==--------<br><br/>
+--------==[ Step 2 ]==--------<br><br/>
+Form 'Главная страница' appears in 2914msec<br><br/>
+Label 'Вход' :: Clicking<br><br/>
+Text Field 'Поле логина' :: Typing 'andrei.internet'<br><br/>
+Text Field 'Поле пароля' :: Typing '9664069'<br><br/>
+Button 'Кнопка Войти' :: Clicking<br><br/>
+--------==[ Step 3 ]==--------<br><br/>
+Label 'Выход' :: Clicking<br><br/>
+--------==[ Step 4 ]==--------<br><br/>
+--------==[ Step 5 ]==--------<br><br/>
+<br><br/>
+*************************************************<br><br/>
+***** Test case: 'demo.test.Logout' Passed! *****<br><br/>
+*************************************************<br><br/>
+<br><br/>
+</div>
+</td>
+<td></td>
+<td>16</td>
+<td>demo.test.Logout@bae7dc0</td></tr>
+</table><p>
+</body>
+</html>

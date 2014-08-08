@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Demo Test Plan]">
+  <parameter name="password" value="kolya123"/>
+  <parameter name="name" value="Коля Викорин"/>
+  <parameter name="user" value="kolya.vykoryn"/>
+  <test name="Functional Tests(failed)">
+    <parameter name="password" value="kolya123"/>
+    <parameter name="name" value="Коля Викорин"/>
+    <parameter name="user" value="kolya.vykoryn"/>
+    <classes>
+      <class name="demo.test.Login">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Login -->
+      <class name="demo.test.PrivateOffice">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.PrivateOffice -->
+      <class name="demo.test.Comment">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+          <include name="xTest"/>
+        </methods>
+      </class> <!-- demo.test.Comment -->
+      <class name="demo.test.Logout">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Logout -->
+    </classes>
+  </test> <!-- Functional Tests(failed) -->
+</suite> <!-- Failed suite [Demo Test Plan] -->

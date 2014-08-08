@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoTestPlan]">
+  <parameter name="password" value="kolya123"/>
+  <parameter name="user" value="kolya.vykoryn"/>
+  <parameter name="username" value="Коля Викорин"/>
+  <test name="Functional Tests(failed)">
+    <parameter name="password" value="kolya123"/>
+    <parameter name="user" value="kolya.vykoryn"/>
+    <parameter name="username" value="Коля Викорин"/>
+    <classes>
+      <class name="demo.test.Login">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+          <include name="xTest"/>
+        </methods>
+      </class> <!-- demo.test.Login -->
+      <class name="demo.test.Comment">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Comment -->
+      <class name="demo.test.Finance">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Finance -->
+      <class name="demo.test.Logout">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Logout -->
+      <class name="demo.test.TVset">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.TVset -->
+      <class name="demo.test.Building">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Building -->
+      <class name="demo.test.Forum">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Forum -->
+      <class name="demo.test.Jobs">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Jobs -->
+      <class name="demo.test.Shop">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.Shop -->
+      <class name="demo.test.PrivateOffice">
+        <methods>
+          <include name="before"/>
+          <include name="after"/>
+        </methods>
+      </class> <!-- demo.test.PrivateOffice -->
+    </classes>
+  </test> <!-- Functional Tests(failed) -->
+</suite> <!-- Failed suite [DemoTestPlan] -->

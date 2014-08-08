@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="DemoTestPlan" verbose="1">
+	<test name="Functional Tests" preserve-order="true">
+		<parameter name="user" value="kolya.vykoryn" />
+		<parameter name="password" value="kolya123" />
+		<parameter name="username" value="Коля Викорин" />
+		<classes>
+			<class name="demo.test.Finance" />
+			<class name="demo.test.TVset" />
+			<class name="demo.test.Jobs" />
+			<class name="demo.test.Shop" />
+			<class name="demo.test.Forum" />
+			<class name="demo.test.Building" />
+			<class name="demo.test.Login" />
+			<class name="demo.test.PrivateOffice" />
+			<class name="demo.test.Comment" />
+			<class name="demo.test.Logout" />
+        </classes>
+	</test>
+</suite>
